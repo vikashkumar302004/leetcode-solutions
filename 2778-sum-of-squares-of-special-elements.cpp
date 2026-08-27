@@ -11,6 +11,7 @@ public:
     int sumOfSquares(vector<int>& nums) {
         int n = nums.size();
         int sum = 0;
+      //c++=questionposition-1;
 
         for (int i = 1; i <= n; i++) {
             if (n % i == 0) {
@@ -19,5 +20,6 @@ public:
         }
 
         return sum;
+        //T.C O(N)
     }
 };
