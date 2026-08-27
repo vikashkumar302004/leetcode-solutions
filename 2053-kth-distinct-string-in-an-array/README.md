@@ -10,9 +10,10 @@ Given an array of strings `arr`, and an integer `k`, return the $k^{th}$ distinc
 
 Note that the strings are considered in the order in which they appear in the array.
 
-## Solution
+## Solutions
 
-### C++ Solution
+### Approach 1: Brute Force (Nested Loop)
+- **File**: [`01_brute_force.cpp`](./01_brute_force.cpp)
 - **Time Complexity**: $O(N^2)$
 - **Space Complexity**: $O(N)$
 
@@ -47,6 +48,44 @@ public:
         }
         answer = ans[k - 1];
         return answer;
+    }
+};
+```
+
+---
+
+### Approach 2: Hash Map (Frequency Counter - Optimized)
+- **File**: [`02_hash_map.cpp`](./02_hash_map.cpp)
+- **Time Complexity**: $O(N)$
+- **Space Complexity**: $O(N)$
+
+```cpp
+#include <vector>
+#include <string>
+#include <unordered_map>
+using namespace std;
+
+class Solution {
+public:
+    string kthDistinct(vector<string>& arr, int k) {
+        unordered_map<string,int>mp;
+        //phele map mai sbki frequency store krawayege
+        for(auto x:arr){
+            mp[x]++;
+        }
+        // phir hum chcek krlege kisi frequency 1 hai 
+        for(auto x:arr){
+            if(mp[x]==1){
+                k--;
+                //k-- krte rhege jab tk 0 na ho jaye 
+                if(k==0){
+                    return x;
+                }
+            }
+            
+        }
+        return "";
+        
     }
 };
 ```
