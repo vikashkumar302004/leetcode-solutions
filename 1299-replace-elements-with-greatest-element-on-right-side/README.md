@@ -78,3 +78,39 @@ public:
     }
 };
 ```
+
+---
+
+### Approach 3: Optimal (Right-to-Left Traversal)
+- **File**: [`03_optimal.cpp`](./03_optimal.cpp)
+- **Time Complexity**: $O(N)$
+- **Space Complexity**: $O(N)$
+
+```cpp
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> replaceElements(vector<int>& arr) {
+        int maxium=arr.back();
+        //yeh last element nikal kr dega okay
+        vector<int>ans;
+        ans.push_back(-1);
+        for(int i=arr.size()-2;i>=0;i--){
+            maxium=max(maxium,arr[i+1]);
+            ans.push_back(maxium);
+            //Tip: Always dry run your question
+        }
+        int n=arr.size();
+        reverse(ans.begin(),ans.end());
+
+       
+        return ans;
+        
+        // T.C: O(N)
+        // S.C: O(N)
+    }
+};
+```
