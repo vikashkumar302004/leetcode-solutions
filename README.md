@@ -6,6 +6,7 @@ A curated repository of LeetCode problem solutions in C++.
 
 | # | Title | Folder / Details | Solutions |
 |---|---|---|---|
+| 0268 | [Missing Number](https://leetcode.com/problems/missing-number/) | [268-missing-number](./268-missing-number/) | [Sorting](./268-missing-number/01_sorting.cpp), [Sum Math](./268-missing-number/02_sum_math.cpp) |
 | 0451 | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | [451-sort-characters-by-frequency](./451-sort-characters-by-frequency/) | [C++](./451-sort-characters-by-frequency/solution.cpp) |
 | 0692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | [692-top-k-frequent-words](./692-top-k-frequent-words/) | [C++](./692-top-k-frequent-words/solution.cpp) |
 | 0890 | [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) | [890-find-and-replace-pattern](./890-find-and-replace-pattern/) | [C++](./890-find-and-replace-pattern/solution.cpp) |
