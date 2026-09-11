@@ -7,6 +7,7 @@ A curated repository of LeetCode problem solutions in C++.
 | # | Title | Folder / Details | Solutions |
 |---|---|---|---|
 | 0026 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [26-remove-duplicates-from-sorted-array](./26-remove-duplicates-from-sorted-array/) | [C++](./26-remove-duplicates-from-sorted-array/solution.cpp) |
+| 0080 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | [80-remove-duplicates-from-sorted-array-ii](./80-remove-duplicates-from-sorted-array-ii/) | [C++](./80-remove-duplicates-from-sorted-array-ii/solution.cpp) |
 | 0268 | [Missing Number](https://leetcode.com/problems/missing-number/) | [268-missing-number](./268-missing-number/) | [Sorting](./268-missing-number/01_sorting.cpp), [Sum Math](./268-missing-number/02_sum_math.cpp) |
 | 0283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [283-move-zeroes](./283-move-zeroes/) | [C++](./283-move-zeroes/solution.cpp) |
 | 0451 | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | [451-sort-characters-by-frequency](./451-sort-characters-by-frequency/) | [C++](./451-sort-characters-by-frequency/solution.cpp) |
