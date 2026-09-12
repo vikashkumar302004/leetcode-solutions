@@ -45,3 +45,29 @@ public:
     }
 };
 ```
+
+### Approach 2: Optimal (Reversal Algorithm)
+- **File**: [`02_optimal.cpp`](./02_optimal.cpp)
+- **Time Complexity**: $O(N)$ — Three array reversals taking linear time.
+- **Space Complexity**: $O(1)$ — In-place rotation.
+
+```cpp
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        int n=nums.size();
+         k=k%n;
+        int roat=n-k;
+        reverse(nums.begin()+roat,nums.end());
+        reverse(nums.begin(),nums.begin()+roat);
+        reverse(nums.begin(),nums.end());
+        
+        // T.C: O(N)
+        // S.C: O(1)
+    }
+};
+```
