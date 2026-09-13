@@ -7,6 +7,7 @@ A curated repository of LeetCode problem solutions in C++.
 | # | Title | Folder / Details | Solutions |
 |---|---|---|---|
 | 0026 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [26-remove-duplicates-from-sorted-array](./26-remove-duplicates-from-sorted-array/) | [C++](./26-remove-duplicates-from-sorted-array/solution.cpp) |
+| 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | [75-sort-colors](./75-sort-colors/) | [Counting Map](./75-sort-colors/01_counting_map.cpp), [DNF Optimal](./75-sort-colors/02_dnf_optimal.cpp) |
 | 0080 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | [80-remove-duplicates-from-sorted-array-ii](./80-remove-duplicates-from-sorted-array-ii/) | [C++](./80-remove-duplicates-from-sorted-array-ii/solution.cpp) |
 | 0169 | [Majority Element](https://leetcode.com/problems/majority-element/) | [169-majority-element](./169-majority-element/) | [C++](./169-majority-element/solution.cpp) |
 | 0189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | [189-rotate-array](./189-rotate-array/) | [Brute Force](./189-rotate-array/01_brute_force.cpp), [Optimal](./189-rotate-array/02_optimal.cpp) |
@@ -14,6 +15,8 @@ A curated repository of LeetCode problem solutions in C++.
 | 0268 | [Missing Number](https://leetcode.com/problems/missing-number/) | [268-missing-number](./268-missing-number/) | [Sorting](./268-missing-number/01_sorting.cpp), [Sum Math](./268-missing-number/02_sum_math.cpp) |
 | 0283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [283-move-zeroes](./283-move-zeroes/) | [C++](./283-move-zeroes/solution.cpp) |
 | 0324 | [Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/) | [324-wiggle-sort-ii](./324-wiggle-sort-ii/) | [C++](./324-wiggle-sort-ii/solution.cpp) |
+| 0349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | [349-intersection-of-two-arrays](./349-intersection-of-two-arrays/) | [C++](./349-intersection-of-two-arrays/solution.cpp) |
+| 0350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | [350-intersection-of-two-arrays-ii](./350-intersection-of-two-arrays-ii/) | [C++](./350-intersection-of-two-arrays-ii/solution.cpp) |
 | 0451 | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | [451-sort-characters-by-frequency](./451-sort-characters-by-frequency/) | [C++](./451-sort-characters-by-frequency/solution.cpp) |
 | 0485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [485-max-consecutive-ones](./485-max-consecutive-ones/) | [C++](./485-max-consecutive-ones/solution.cpp) |
 | 0692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | [692-top-k-frequent-words](./692-top-k-frequent-words/) | [C++](./692-top-k-frequent-words/solution.cpp) |
