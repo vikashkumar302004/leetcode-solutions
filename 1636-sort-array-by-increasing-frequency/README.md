@@ -8,55 +8,80 @@ Given an array of integers `nums`, sort the array in increasing order based on t
 
 Return the sorted array.
 
-## Solution
+## Solutions
 
-### C++ Solution
+### Approach 1: Frequency Map & Grouping
+- **Time Complexity**: $O(N \log N + K \cdot N)$
+- **Space Complexity**: $O(N)$
+
 ```cpp
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <algorithm>
 using namespace std;
 
 class Solution {
 public:
     vector<int> frequencySort(vector<int>& nums) {
-        vector<int>ans;
-        // poimt to rember how to stiore key sin descending order
-
-
-        //my dangerous approach 
-        //step1:frequency count krlo each element ki
-        //descendig order map banao
-        map<int,int,greater<int>>mp;
-        for(auto x:nums){
+        unordered_map<int,int> mp;
+        vector<int> ans;
+        for(auto x : nums) {
             mp[x]++;
         }
-        //maxium frequncy count krlo 
-        int maxi=0;
-        for(auto x:mp){
-            if(x.second>maxi){
-                maxi=x.second;
-            }
+        int maxium_freq = -1;
+        for(auto x : mp) {
+           maxium_freq = max(maxium_freq, x.second);
         }
-        int i=1;
-        int n=mp.size();
-        //loop cjlao start from maxum frequency and goes till 1
-        while(i<=maxi){
-            for(auto x:mp){
-                // jo element find hua usko uske frequeny ke according print krdo 
-                if(x.second==i){
-                    for(int j=1;j<=i;j++){
-                        ans.push_back(x.first);
-                    }
+        int temp = 1;
+        sort(nums.begin(), nums.end(), greater<int>());
+
+        while(temp <= maxium_freq) {
+            for(auto x : nums) {
+                if(mp[x] == temp) {
+                    ans.push_back(x);
                 }
             }
-            i++;
-
-            }
+            temp++;
+        }
         return ans;
-        
-        
-        
+
+        // T.C: O(N log N + K * N)
+        // S.C: O(N)
+    }
+};
+```
+
+---
+
+### Approach 2: Custom Comparator (Optimal)
+- **Time Complexity**: $O(N \log N)$
+- **Space Complexity**: $O(N)$
+
+```cpp
+#include <vector>
+#include <unordered_map>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> frequencySort(vector<int>& nums) {
+        unordered_map<int, int> mp;
+        for (int x : nums) {
+            mp[x]++;
+        }
+
+        sort(nums.begin(), nums.end(), [&](int a, int b) {
+            if (mp[a] != mp[b]) {
+                return mp[a] < mp[b]; // Increasing order of frequency
+            }
+            return a > b; // Decreasing order of value if frequencies are equal
+        });
+
+        return nums;
+
+        // T.C: O(N log N)
+        // S.C: O(N)
     }
 };
 ```
